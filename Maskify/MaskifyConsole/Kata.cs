@@ -16,7 +16,7 @@ namespace MaskifyConsole
         public static string MaskifyVersion1(string cc)
         {
             int skipChars = 4;
-            if (cc.Length <= 4)
+            if (cc.Length <= skipChars)
                 return cc;
 
             var charsToMaskify = Regex.Replace(cc.Substring(0, cc.Length - skipChars), "[0-9]", "#");
